@@ -1,15 +1,15 @@
-import NextAuth from "next-auth"
-import GithubProvider from "next-auth/providers/github"
+import NextAuth from 'next-auth'
+import GithubProvider from 'next-auth/providers/github'
 
 const handler = NextAuth({
     providers: [
         GithubProvider({
-          clientId: process.env.GITHUB_ID || '',
-          clientSecret: process.env.GITHUB_SECRET || '',
+            clientId: process.env.GITHUB_ID || '',
+            clientSecret: process.env.GITHUB_SECRET || '',
         }),
         // ...add more providers here
-      ],
-      secret: process.env.JWT_TOKEM
+    ],
+    secret: process.env.JWT_TOKEM,
 })
 
 export { handler as GET, handler as POST }
