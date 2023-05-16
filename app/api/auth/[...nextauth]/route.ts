@@ -9,6 +9,7 @@ const handler = NextAuth({
         }),
         // ...add more providers here
       ],
+      secret: process.env.JWT_TOKEM
 })
 
 export { handler as GET, handler as POST }
