@@ -20,7 +20,6 @@ yarn create next-app
 yarn add next-auth
 ```
 
-
 ## Configuration
 
 1. Create a new file in the app directory called `app/api/auth/[...nextauth]/router.ts`. This file will handle the authentication routes.
@@ -55,7 +54,7 @@ import { SessionProvider } from 'next-auth/react'
 export default function RootLayout({
     children,
 }: {
-    children: React.ReactNode
+    children: React.ReactNode,
 }) {
     return (
         <html lang="en">
@@ -98,9 +97,10 @@ const Component = () => {
 export default Component
 ```
 
-## Deployment 
+## Deployment
 
 # Vercel
+
 If you're using Vercel for deployment, follow these steps to set up environment variables:
 
 1. Open your project on Vercel's dashboard.
@@ -112,7 +112,9 @@ If you're using Vercel for deployment, follow these steps to set up environment 
 Vercel will automatically use these environment variables during deployment.
 
 ## Further Customization
+
 NextAuth.js provides various configuration options and customization possibilities. Visit the [next-auth.js](https://next-auth.js.org/getting-started/example). documentation for more details on available options, providers, callbacks, and customization.
 
 ## Conclusion
+
 Congratulations! You've set up NextAuth.js with an app directory in your Next.js application. You can now authenticate users using various providers and leverage the useSession hook to handle authentication in your components.

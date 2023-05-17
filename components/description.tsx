@@ -1,10 +1,16 @@
+import { useSession } from 'next-auth/react'
 import React from 'react'
 
-const Description = () => {
+export type DescriptionProps = {
+    content?: string
+}
+
+const Description: React.FC<DescriptionProps> = ({ content }) => {
     return (
-        <p className="text-base font-light text-biege">
-            The easiest way to get started is authentication by the Next-Auth.
-            By Connecting with more than one different provider.
+        <p className="text-base font-light text-center text-biege">
+            {content
+                ? content
+                : 'The easiest way to get started is authentication by the Next-Auth. By Connecting with more than one different provider.'}
         </p>
     )
 }

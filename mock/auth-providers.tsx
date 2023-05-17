@@ -14,12 +14,12 @@ export const authProvidersData: ProviderProps[] = [
         title: 'Google',
         icon: <FaGoogle />,
         provider: 'google',
-        devMode: 'dev',
+        devMode: 'prod',
     },
     {
         title: 'Twitter',
         icon: <FaTwitter />,
         provider: 'twitter',
-        devMode: 'dev',
+        devMode: 'prod',
     },
 ]
