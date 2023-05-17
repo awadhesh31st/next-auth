@@ -1,10 +1,9 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-
+import { cm } from '@/lib/utils'
 import { ProviderProps } from '@/types/auth-providers'
 import { signIn, signOut, useSession } from 'next-auth/react'
-import { cm } from '@/lib/utils'
 import { FaSpinner } from 'react-icons/fa'
 
 const ActivePill: React.FC<ProviderProps> = ({
